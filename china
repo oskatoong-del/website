@@ -4,16 +4,73 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My First Web Page</title>
+        <style>
+  #hiddenContent {
+    display: nne; /* Initially hide the content */
+    border: 1p solid blue;
+    padding: 1px;
+    margin-top 10px;
+  }
+</style>
     </head>
     <body>
       <img 
-        src = "https://ibb.co/6c3rXyjd">
-      <img 
-        src="https://i.ibb.co/p6tbh1Ym/image.png"
-        <h1> Hi this is my first website</h1>
-        <p> I will be adding more new features but this is all i can provide. </p>
-        <p>Welcome to China where one is abled to ask about China's history:)</p>
+        src="htps://i.ibb.co/yBcGzphm/image.png"
+         <h1> i this is my first website</h1>
+         <p> Iwill be adding more new features but this is all i can provide. </p>
+         <p>Welcome to China where one is abled to ask about China history:)</p>
+<button id="myButton" onclick="showContent()">Learn about PRC</button>
+<button id="urButton" onclick="showROC()">Learn about ROC</button>
 
+<div id="hiddenContent">
+  The PRC is known as the current ruling party of china with 22 provinces and the 23rd
+  being taiwan, 333 province-level divisions, 5 autonomous regions,
+   4 municipalities, and 2 semi-autonomous special administrative regions.
+    Beijing is the capital, while Shanghai is the most populous city by urban area 
+    and largest financial center. The 5 autonomous regions being tibet, inner mongolia, 
+    east turkistan, Guangxi, and Ningxia. The 2 special administrative zones being the
+    famous ethinically cantonese majority Hong Kong and macau. Both were handed to the PRC
+    by the british and the portugese respectively and will end its special administarative 
+    status in 2047. It holds 17% of the worlds population of 1.4 billion people. 
+    <strong>Maozedong rule </strong>h6 before 1946: Being created during the messy split
+    of the qing dynasty, in july 1921 the ccp was created in shanghai. They took control
+    of jiangxi province before moving north to yan'an. This was after the nationalists 
+    destroyed the old base. Being at yan'an , the communists then helped the nationalists fight
+    the japanese before controlling all of Manchuria north of the Songhua River, the eastern part, 
+    and much of the countryside in the south. In 1948, the Communists attacked the major populated
+    regions of china in which greatlly weakened the power of the corrupt ROC army.
+</div>
+<div id="rocBs"
+   The Republic of China (ROC) was established on 1 January 1912 as a sovereign state in mainland China
+   following the 1911 Revolution, which overthrew the Manchu-led Qing dynasty and ended China's imperial 
+   history. the Kuomintang (KMT) reunified the country and initially ruled it as a one-party state with 
+   Nanjing as the national capital. In 1949, after fighting a multiple front war against different factions
+   ,the ROC was eventually defeated after a prolong and brutal civil war by the prc due to the corrupt regime 
+   which locals despised. They then retreated to the island of taiwan and 4 little islands where they still
+   hold control over, even though being super near to the PRC shore. 
+  </div>
+  
+
+<script>
+  function showContent() {
+    var content = document.getElementById("hiddenContent");
+    if (content.style.display === "none") {
+      content.style.display = "block"; // Show the content
+    } else {
+      content.style.display = "none"; // Optionally, hide it again if clicked
+    }
+  }
+</script>
+<script>
+  function showROC() {
+    var content = document.getElementById("rocBS");
+    if (content.style.display === "none") {
+      content.style.display = "block"; // Show the content
+    } else {
+      content.style.display = "none"; // Optionally, hide it again if clicked
+    }
+  }
+</script>
         
     </body>
     </html>
