@@ -1,75 +1,159 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My First Web Page</title>
-        <style>
-  #hiddenContent {
-    display: nne; /* Initially hide the content */
-    border: 1p solid blue;
-    padding: 1px;
-    margin-top 10px;
-  }
-</style>
-    </head>
-    <body>
-      <img 
-        src="htps://i.ibb.co/yBcGzphm/image.png"
-         <h1> i this is my first website</h1>
-         <p> Iwill be adding more new features but this is all i can provide. </p>
-         <p>Welcome to China where one is abled to ask about China history:)</p>
-<button id="myButton" onclick="showContent()">Learn about PRC</button>
-<button id="urButton" onclick="showROC()">Learn about ROC</button>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Web Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
 
-<div id="hiddenContent">
-  The PRC is known as the current ruling party of china with 22 provinces and the 23rd
-  being taiwan, 333 province-level divisions, 5 autonomous regions,
-   4 municipalities, and 2 semi-autonomous special administrative regions.
-    Beijing is the capital, while Shanghai is the most populous city by urban area 
-    and largest financial center. The 5 autonomous regions being tibet, inner mongolia, 
-    east turkistan, Guangxi, and Ningxia. The 2 special administrative zones being the
-    famous ethinically cantonese majority Hong Kong and macau. Both were handed to the PRC
+    img {
+      width: 300px;
+      border-radius: 10px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin: 5px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Hide both sections initially */
+    #hiddenContent, #rocBS {
+      display: none;
+      border: 1px solid #007bff;
+      padding: 15px;
+      margin-top: 10px;
+      border-radius: 10px;
+      background-color: #fff;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    /* Smooth fade-in animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <img src="https://i.ibb.co/yBcGzphm/image.png" alt="China image" />
+  <h1>This is my first website</h1>
+  <p>I will be adding more new features but this is all I can provide.</p>
+  <p>Welcome to China where one is able to ask about China history :)</p>
+
+  <button onclick="showSection('prc')">Learn about PRC</button>
+  <button onclick="showSection('roc')">Learn about ROC</button>
+
+  <div id="hiddenContent">
+    <h2>People’s Republic of China (PRC)</h2>
+    <p>
+      The PRC is the current ruling government of China with 22 provinces and the 23rd being Taiwan,
+      333 province-level divisions, 5 autonomous regions, 4 municipalities, and 2 special administrative regions.
+      Beijing is the capital, while Shanghai is the most populous city and largest financial center.
+      Both were handed to the PRC
     by the british and the portugese respectively and will end its special administarative 
     status in 2047. It holds 17% of the worlds population of 1.4 billion people. 
-    <strong>Maozedong rule </strong>h6 before 1946: Being created during the messy split
-    of the qing dynasty, in july 1921 the ccp was created in shanghai. They took control
-    of jiangxi province before moving north to yan'an. This was after the nationalists 
-    destroyed the old base. Being at yan'an, the communists then helped the nationalists fight
-    the japanese before controlling all of Manchuria north of the Songhua River, the eastern part, 
-    and much of the countryside in the south. In 1948, the Communists attacked the major populated
-    regions of china in which greatlly weakened the power of the corrupt ROC army.
-</div>
-<div id="rocBs"
-   The Republic of China (ROC) was established on 1 January 1912 as a sovereign state in mainland China
-   following the 1911 Revolution, which overthrew the Manchu-led Qing dynasty and ended China's imperial 
-   history. the Kuomintang (KMT) reunified the country and initially ruled it as a one-party state with 
-   Nanjing as the national capital. In 1949, after fighting a multiple front war against different factions,
-   the ROC was eventually defeated after a prolong and brutal civil war by the prc due to the corrupt regime 
-   which locals despised. They then retreated to the island of taiwan and 4 little islands where they still
-   hold control over, even though being super near to the PRC shore. 
-  </div>
-  
+    </p>
+    <h3>Mao Zedong's Rule</h3>
+    <p>
+      Formed in 1921, the CCP rose to power after defeating the Nationalists in the Chinese Civil War.
+      By 1949, the PRC was officially established, marking the beginning of communist rule in mainland China. 
+      They took control of jiangxi province before moving north to yan'an. This was after the nationalists 
+      destroyed the old base. Being at yan'an , the communists then helped the nationalists fight
+      the japanese before controlling all of Manchuria north of the Songhua River, the eastern part, 
+      and much of the countryside in the south. In 1948, the Communists attacked the major populated
+      regions of china in which greatlly weakened the power of the corrupt ROC army.
+    </p>
+    <p>
+    <strong><h3>Capture of tibet + aksai chin = indian war machine:</h3></strong> After the chinese civil war,
+    the <span style="color: blue;"><strong>PRC</strong></span> demanded that all former qing dynasty members
+    are to join with the PRC. They did not have much attention to the mongolians as a buffer state for their 
+    ally the soviets. However had a <strong>keen interest</strong> in tibet, this is due to its low population
+    density in which decreases cost of maintaining tibet and helps gain more natural resources in the tibetian 
+    plateau. <span style="color: red;"><strong>October 1950:</strong></span> Chinese steam rolls into the Chamdo
+    region of eastern Tibet, defeating the Tibetan army in the Battle of Chamdo.
+    </p>
+    <img src="https://i.ibb.co/ZzCZ3Bjw/image.png" alt="Chamdo" />
+    <p>
+    May 23, 1951: Representatives of the Dalai Lama's government, under pressure from the Chinese military presence, 
+    signed the <strong>Seventeen Point Agreement</strong> in Beijing, which formally affirmed China's sovereignty over Tibet.
+    October 1951: The 14th Dalai Lama formally accepted the agreement. 
+    <strong><h3>Sino soviet split first:</h3></strong> the gradual deterioration of relations between the Soviet Union
+    and China from 1956 to 1966, driven by ideological differences and geopolitical tensions. Key issues included China's\
+    rejection of Soviet de-Stalinization and "peaceful coexistence" with the West, which Mao Zedong saw as revisionism. 
+    China also resented Soviet foreign policies, such as its relationship with India, while the USSR feared Mao's more aggressive stance.
+    This ideological rift led to open conflict in 1969 and fundamentally altered the global balance of power during the Cold War. 
+    Essentially the split was due to the different ideoligys and the de-satlinization. This brought rise to the maoism which is a doctrine
+    created by maozedong as formerly practised in China, having as a central idea permanent revolution and stressing the importance of the peasantry,
+     small-scale industry, and agricultural collectivization. <strong>*of course now china does not practise it lah but its interesting :)</strong>
+    </p>
+    <p>
+    <strong><h3>Now the part you all have been waiting for.... the indian war machine!: (Sources from Sarah Paine but i elaborate)</h3></strong> 
+    After the capture of tibet, India being super friendly recongizes the PRC as the one chinese government. India being super idealistic and 
+    had allied the soviet union after the sino soviet split made china look at india with caution. So when china attacked tibet, indians were angry
+    as tibetian culture was of indian origin and not chinese origin. So then the chinese stated that if india were to recognise their sovereignty
+    over complete tibet and parts of the aksai chin in kashmir, china will recognise indian sovereignty over a much densely populated arunachal pradesh
+    region. But Nehru does not agree with it, so during the cold war cuban missile crisis when soviets were distracted, they invades the aksai chin
+     plateau and the arunachal pradesh area marking the 1960s sino indian war. The chinese won as the indians were furious, after treating the 
+     chinese kindly even after the brutal oppression of tibet, so they bulk their military to become one of the most no.of active military personnels.
+     <span style="color: yellow;"><strong>Jawaharlal nehru:</strong></span>"There are not many instances in history where one country has gone out of her way
+     to be friendly and co-operative with the chinese government and people, and to plead their cause in the councils of the world,and then for the chinese even
+     go tothe extent of commitig aggression and invade our sacred land. "
 
-<script>
-  function showContent() {
-    var content = document.getElementById("hiddenContent");
-    if (content.style.display === "none") {
-      content.style.display = "block"; // Show the content
-    } else {
-      content.style.display = "none"; // Optionally, hide it again if clicked
+    </p>
+
+  </div>
+
+  <div id="rocBS">
+    <h2>Republic of China (ROC)</h2>
+    <p>
+      The Republic of China was founded on January 1, 1912, after the fall of the Qing dynasty.
+      Initially ruled by the Kuomintang (KMT), it unified the country and governed from Nanjing.
+      After losing the civil war in 1949, the ROC government relocated to Taiwan, where it continues to exist today.
+    </p>
+  </div>
+
+  <script>
+    function showSection(section) {
+      const prc = document.getElementById("hiddenContent");
+      const roc = document.getElementById("rocBS");
+
+      // Hide both first
+      prc.style.display = "none";
+      roc.style.display = "none";
+
+      // Show the chosen one
+      if (section === "prc") {
+        prc.style.display = "block";
+      } else if (section === "roc") {
+        roc.style.display = "block";
+      }
     }
-  }
-</script>
-<script>
-  function showROC() {
-    var content = document.getElementById("rocBS");
-    if (content.style.display === "none") {
-      content.style.display = "block"; // Show the content
-    } else {
-      content.style.display = "none"; // Optionally, hide it again if clicked
-    }
-  }
+  </script>
+</body>
+</html>
+
 </script>
         
     </body>
