@@ -19,10 +19,6 @@
       margin-bottom: 10px;
     }
 
-    h1 {
-      color: #333;
-    }
-
     button {
       background-color: #007bff;
       color: white;
@@ -38,18 +34,17 @@
       background-color: #0056b3;
     }
 
-    /* Hide both sections initially */
-    #hiddenContent, #rocBS {
+    /* Hide all sections initially */
+    .info-section {
       display: none;
       border: 1px solid #007bff;
       padding: 15px;
       margin-top: 10px;
       border-radius: 10px;
-      background-color: #fff;
+      background-color: white;
       animation: fadeIn 0.6s ease-in-out;
     }
 
-    /* Smooth fade-in animation */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
@@ -57,18 +52,16 @@
   </style>
 </head>
 <body>
-  <img src="https://i.ibb.co/yBcGzphm/image.png" alt="China image" />
+
   <h1>This is my first website</h1>
-  <p>I will be adding more new features but this is all I can provide.</p>
-  <p>Welcome to China where one understand China's history :)</p>
-  <p><strong><h2>Modern China's history</h2></strong></p>
+
   <button onclick="showSection('prc')">Learn about PRC</button>
   <button onclick="showSection('roc')">Learn about ROC</button>
-  <p><span style="color: blue;"><strong><h2>China's golden age/ China's age of prosperity</h2></strong></span></p>
-  <button onclick="showSection('Golden age1')">Tang dynasty</button>
-  <button onclick="showSection('Golden age2')">Song dynasty</button>
+  <button onclick="showSection('golden1')">Tang Dynasty</button>
+  <button onclick="showSection( 'golden2')">Song Dynasty</button>
 
-  <div id="hiddenContent">
+  <!-- PRC SECTION -->
+  <div id="prc" class="info-section">
     <h2>People’s Republic of China (PRC)</h2>
     <p>
       The PRC is the current ruling government of China with 22 provinces and the 23rd being Taiwan,
@@ -125,46 +118,38 @@
      go tothe extent of commitig aggression and invade our sacred land. "
 
     </p>
-
   </div>
 
-  <div id="rocBS">
+  <!-- ROC SECTION -->
+  <div id="roc" class="info-section">
     <h2>Republic of China (ROC)</h2>
-    <p>
-      The Republic of China was founded on January 1, 1912, after the fall of the Qing dynasty.
-      Initially ruled by the Kuomintang (KMT), it unified the country and governed from Nanjing.
-      After losing the civil war in 1949, the ROC government relocated to Taiwan, where it continues to exist today.
-    </p>
+    <p>ROC content here...</p>
   </div>
-  <div id="Golden age1">
-    <strong><h3>Tang dynasty</h3></strong>
-    
+
+  <!-- TANG DYNASTY SECTION -->
+  <div id="golden1" class="info-section">
+    <h2>Tang Dynasty</h2>
+    <p>The Tang dynasty was one of China’s golden ages...</p>
+  </div>
+  <!--Song dynasty stuff-->
+  <div id="golden2" class="info-section">
+    <h2>Song Dynasty</h2>
+    <p>The Song dynasty was one of China’s golden ages...</p>
   </div>
 
   <script>
-    function showSection(section) {
-      const prc = document.getElementById("hiddenContent");
-      const roc = document.getElementById("rocBS");
-
-      // Hide both first
-      prc.style.display = "none";
-      roc.style.display = "none";
-      Golden age1.style.display = "none";
-
-      // Show the chosen one
-      if (section === "prc") {
-        prc.style.display = "block";
-      } else if (section === "roc") {
-        roc.style.display = "block";
-      } else if (section === "Golden age1:) {
-        Golden age1.style.display = "block"
-       }
+    function showSection(sectionId) {
+      // Hide all first
+      document.getElementById("prc").style.display = "none";
+      document.getElementById("roc").style.display = "none";
+      document.getElementById("golden1").style.display = "none";
+      document.getElementById("golden2").style.display = "none";
+      // Show selected section
+      document.getElementById(sectionId).style.display = "block";
+    }
   </script>
+
 </body>
 </html>
 
-</script>
-        
-    </body>
-    </html>
 
