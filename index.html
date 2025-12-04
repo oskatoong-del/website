@@ -128,32 +128,11 @@
 
   <!-- TANG DYNASTY SECTION -->
   <div id="golden1" class="info-section">
+    
     <h2>Tang Dynasty <strong>618 - 907 AD</strong></h2>
-    <h4>There were 24 emperors. 
-1. Gaozu (618–626)
-2. Taizong (626–649)
-3. Gaozong (649–683)
-4. Zhongzong (first reign 684)
-5. Ruizong (first reign 684–690)
-6. Wu Zetian (ruler of the Wu Zhou interregnum, 690–705)
-7. Zhongzong (second reign 705–710)
-8. Shaodi (Shangdi) (710, reigned one month)
-9. Ruizong (second reign 710–712)
-10. Xuanzong (712–756)
-11. Suzong (756–762)
-12. Daizong (762–779)
-13. Dezong (779–805)
-14. Shunzong (805)
-15. Xianzong (805–820)
-16. Muzong (820–824)
-17. Jingzong (824–827)
-18. Wenzong (826–840)
-19. Wuzong (840–846)
-20. Xuanzong II (also known as Xuanzong, 846–859)
-21. Yizong (859–873)
-22. Xizong (873–888)
-23. Zhaozong (888–904)
-24. Aidi (also known as Zhaoxuan or Ai, the last emperor, 904–907) </h4>
+    <h4>There were 21 emperors. </h4>
+    <button onclick="showSection('emperors1')">The emperors</button>
+    
     <p>The Tang dynasty was one of China’s golden ages. <strong>Why would people say that?</strong> Well this is because of the Tang Dynasty's its cosmopolitan culture,
       political stability, and flourishing arts and sciences. The Tang dynasty was initially ruled by Emperor Gaozu (Li Yuan) and his son, Emperor Taizong (Li Shimin). 
       Emperor Gaozu founded the dynasty in 618 after overthrowing the Sui, and reigned until 626 when his son deposed him. Emperor Taizong then ruled from 626 to 
@@ -175,6 +154,29 @@
     <h2>Song Dynasty</h2>
     <p>The Song dynasty was one of China’s golden ages...</p>
   </div>
+  <div id="emperors1" class="info-section">
+Emperor Gaozu	618–626
+Emperor Taizong	626–649
+Emperor Gaozong	650–683
+Emperor Zhongzong	684 and 705–710
+Emperor Ruizong	684–690 and 710–712
+Wu Zetian	690–705
+Emperor Xuanzong	712–756
+Emperor Suzong	756–762
+Emperor Daizong	762–779
+Emperor Dezong	780–805
+Emperor Shunzong	805
+Emperor Xianzong	806–820
+Emperor Muzong	821–824
+Emperor Jingzong	824–826
+Emperor Wenzong	826–840
+Emperor Wuzong	840–846
+Emperor Yizong	846–859
+Emperor Xizong	859–873
+Emperor Zhaozong	873–888
+Emperor Ai	888–904
+  </div>
+  
 
   <script>
     function showSection(sectionId) {
@@ -183,6 +185,7 @@
       document.getElementById("roc").style.display = "none";
       document.getElementById("golden1").style.display = "none";
       document.getElementById("golden2").style.display = "none";
+      document.getElementById("emperors1").style.display = "none";
       // Show selected section
       document.getElementById(sectionId).style.display = "block";
     }
